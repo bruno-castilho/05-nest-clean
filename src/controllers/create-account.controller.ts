@@ -41,7 +41,6 @@ export class CreateAccountController {
       )
     }
 
-
     const hashedPassword = await hash(password, 8)
 
     await this.prisma.user.create({
