@@ -5,9 +5,11 @@ import { FetchRecentQuestionsController } from './controllers/fetch-recent-quest
 import { DatabaseModule } from '../database/database.module'
 import { AuthenticateController } from './controllers/authenticate.controller'
 import { Module } from '@nestjs/common'
+import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 
 @Module({
   imports: [DatabaseModule],
+  providers: [CreateQuestionUseCase],
   controllers: [
     CreateAccountController,
     AuthenticateController,
