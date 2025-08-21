@@ -1,7 +1,6 @@
 import { CreateAccountController } from './controllers/create-account.controller'
 import { CreateQuestionController } from './controllers/create-question.controller'
 import { FetchRecentQuestionsController } from './controllers/fetch-recent-questions.controller'
-
 import { DatabaseModule } from '../database/database.module'
 import { AuthenticateController } from './controllers/authenticate.controller'
 import { Module } from '@nestjs/common'
@@ -22,6 +21,8 @@ import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-ans
 import { EditAnswerController } from './controllers/edit-answer.controller'
 import { DeleteAnswerController } from './controllers/delete-answer.controller'
 import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete-answer'
+import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers'
+import { FetchQuestionAnswersController } from './controllers/fetch-question-answers.controller'
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -36,6 +37,7 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     AnswerQuestionUseCase,
     EditAnswerUseCase,
     DeleteAnswerUseCase,
+    FetchQuestionAnswersUseCase,
   ],
   controllers: [
     CreateAccountController,
@@ -48,6 +50,7 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     AnswerQuestionController,
     EditAnswerController,
     DeleteAnswerController,
+    FetchQuestionAnswersController,
   ],
 })
 export class HttpModule {}
