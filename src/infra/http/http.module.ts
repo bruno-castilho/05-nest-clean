@@ -59,7 +59,7 @@ import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cas
     CommentOnAnswerUseCase,
     DeleteAnswerCommentUseCase,
     FetchAnswerCommentsUseCase,
-    FetchQuestionCommentsUseCase
+    FetchQuestionCommentsUseCase,
   ],
   controllers: [
     CreateAccountController,
@@ -83,4 +83,4 @@ import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cas
     UploadAttachmentController,
   ],
 })
-export class HttpModule { }
+export class HttpModule {}
